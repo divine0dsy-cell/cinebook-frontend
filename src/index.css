@@ -1,0 +1,1266 @@
+/* ==============================
+   CINEBOOK - GLOBAL UI
+   ============================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    min-height: 100vh;
+    color: #29201f;
+}
+
+
+/* ==============================
+   CONTAINER
+   ============================== */
+
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+/* ==============================
+   HEADINGS
+   ============================== */
+
+h1 {
+    color: #65000a;
+    font-weight: bold;
+    text-shadow: 1px 2px 5px rgba(101, 0, 10, 0.15);
+}
+
+h2 {
+    font-weight: bold;
+    color: #7d0710;
+}
+
+
+/* ==============================
+   MOVIE / FORM CARDS
+   ============================== */
+
+.card {
+    border: 2px solid #7d0710;
+    border-radius: 15px;
+    overflow: hidden;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #fffdf9,
+                    #fff7ed
+            );
+
+    box-shadow:
+            0 8px 25px rgba(101, 0, 10, 0.10);
+
+    transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            border-color 0.3s ease;
+}
+
+
+/* Movie card hover */
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+            0 15px 35px rgba(101, 0, 10, 0.18);
+
+    border-color:
+            rgba(159, 13, 25, 0.35);
+}
+
+
+/* ==============================
+   MOVIE POSTERS
+   ============================== */
+
+.card img {
+    transition: 0.3s ease;
+}
+
+
+/*
+   Small smooth effect only.
+   The poster will NOT zoom aggressively.
+*/
+
+.card:hover img {
+    transform: scale(1.01);
+}
+
+
+/* ==============================
+   MOVIE CARD BODY
+   ============================== */
+
+.card-body {
+    background:
+            linear-gradient(
+                    145deg,
+                    #fffdf9,
+                    #fff6eb
+            );
+}
+
+.card-body h5 {
+    color: #65000a;
+}
+
+.card-body p {
+    color: #5e4c49;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.btn-danger {
+    border-radius: 10px;
+    font-weight: bold;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #a30f1b,
+                    #780711
+            );
+
+    border: none;
+
+    box-shadow:
+            0 4px 10px rgba(125, 7, 16, 0.22);
+
+    transition: 0.25s ease;
+}
+
+.btn-danger:hover {
+    background:
+            linear-gradient(
+                    135deg,
+                    #780711,
+                    #5e050c
+            );
+
+    transform: translateY(-1px);
+
+    box-shadow:
+            0 6px 15px rgba(125, 7, 16, 0.30);
+}
+
+
+.btn-primary {
+    border-radius: 10px;
+    font-weight: bold;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #a30f1b,
+                    #780711
+            );
+
+    border: none;
+
+    box-shadow:
+            0 4px 10px rgba(125, 7, 16, 0.22);
+
+    transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+    background:
+            linear-gradient(
+                    135deg,
+                    #780711,
+                    #5e050c
+            );
+
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   WARNING / GOLD BUTTON
+   ============================== */
+
+.btn-warning {
+    background:
+            linear-gradient(
+                    135deg,
+                    #e5b84b,
+                    #c99627
+            );
+
+    border: none;
+
+    color: #4c3000;
+
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    box-shadow:
+            0 4px 10px rgba(180, 130, 30, 0.20);
+}
+
+.btn-warning:hover {
+    background:
+            linear-gradient(
+                    135deg,
+                    #d4a436,
+                    #b88319
+            );
+
+    color: #3c2600;
+}
+
+
+/* ==============================
+   INPUTS & SELECTS
+   ============================== */
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+
+    border:
+            1px solid #dbc9bd;
+
+    background-color: #fffdf9;
+
+    color: #352725;
+
+    padding: 10px 12px;
+
+    transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+
+.form-control:focus,
+.form-select:focus {
+
+    border-color: #a30f1b;
+
+    background-color: #ffffff;
+
+    box-shadow:
+            0 0 0 0.20rem rgba(163, 15, 27, 0.12);
+}
+
+
+/* ==============================
+   BOOKING FORM
+   ============================== */
+
+form {
+    color: #3f302d;
+}
+
+
+/* ==============================
+   TOTAL AMOUNT
+   ============================== */
+
+.alert-info {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #fff4d8,
+                    #fff9ed
+            );
+
+    border:
+            1px solid #e6c56f;
+
+    color: #65000a;
+
+    border-radius: 10px;
+
+    box-shadow:
+            0 4px 12px rgba(160, 110, 20, 0.08);
+}
+
+
+/* ==============================
+   TABLE
+   ============================== */
+
+.table-responsive {
+    border-radius: 12px;
+
+    box-shadow:
+            0 8px 25px rgba(101, 0, 10, 0.10);
+}
+
+
+table {
+    background: #fffdf9;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-bottom: 0;
+}
+
+
+/* Table body */
+
+.table tbody {
+    background: #fffdf9;
+}
+
+
+/* Table rows */
+
+.table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #fff3e6;
+}
+
+
+/* Table cells */
+
+.table td {
+    vertical-align: middle;
+}
+
+
+/* ==============================
+   TABLE HEADER
+   ============================== */
+
+.table-dark {
+    background:
+            linear-gradient(
+                    135deg,
+                    #9f0d19,
+                    #70050c
+            ) !important;
+
+    color: white !important;
+}
+
+.table-dark th {
+    background:
+            linear-gradient(
+                    135deg,
+                    #9f0d19,
+                    #70050c
+            ) !important;
+
+    color: white !important;
+
+    border-color: #8a0913 !important;
+}
+
+
+/* ==============================
+   SEARCH INPUT - ADMIN
+   ============================== */
+
+input[type="text"] {
+    border-radius: 10px;
+
+    border: 1px solid #dbc9bd;
+
+    background-color: #fffdf9;
+
+    padding: 9px 12px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #a30f1b;
+
+    box-shadow:
+            0 0 0 0.20rem rgba(163, 15, 27, 0.12);
+}
+
+
+/* ==============================
+   LOGIN CARD
+   ============================== */
+
+.shadow-lg {
+    box-shadow:
+            0 15px 40px rgba(101, 0, 10, 0.15) !important;
+}
+
+
+/* ==============================
+   LOGO IMAGE
+   ============================== */
+
+img[alt="CineBook Logo"] {
+    filter:
+            drop-shadow(
+                    0 4px 6px rgba(101, 0, 10, 0.15)
+            );
+}
+
+
+/* ==============================
+   SMOOTH PAGE FEEL
+   ============================== */
+
+button {
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .card {
+        border-radius: 12px;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+
+}
+
+
+/* ==============================
+   CUSTOMER DASHBOARD LOGO
+   ============================== */
+
+.customer-logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.customer-logo {
+    width: 460px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+.movie-card img {
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   VINTAGE CINEMA LOGIN BACKGROUND
+   ============================== */
+
+.login-page {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    background-image: url("/login-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =====================================
+   CINEBOOK CUSTOMER DASHBOARD BACKGROUND
+   ===================================== */
+
+html,
+body,
+#root {
+    min-height: 100%;
+}
+
+body:has(.customer-page) {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("/login-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Keep the dashboard itself transparent */
+
+.customer-page {
+    min-height: 100vh;
+    background: transparent;
+}
+
+
+/* =====================================
+   CINEBOOK ADMIN DASHBOARD BACKGROUND
+   ===================================== */
+
+body:has(.admin-page) {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("/login-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Keep admin dashboard transparent */
+
+.admin-page {
+    min-height: 100vh;
+    background: transparent;
+}
+
+
+/* ==============================
+   SEAT SELECTION
+   ============================== */
+
+.seat-selection-page {
+    min-height: 100vh;
+    padding: 20px;
+    background: white;
+}
+
+
+/* Header */
+
+.seat-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.seat-header > div {
+    text-align: center;
+    flex: 1;
+}
+
+.seat-header h2 {
+    margin: 0;
+    color: #65000a;
+}
+
+.seat-header p {
+    margin: 5px 0 0;
+    color: #806b65;
+    font-weight: 500;
+}
+
+
+/* Back Button */
+
+.back-btn {
+    border: none;
+    background: #65000a;
+    color: white;
+
+    padding: 9px 18px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Theatre */
+
+.theatre-container {
+    max-width: 950px;
+    margin: auto;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: #fffdf9;
+
+    border: 1px solid rgba(125, 7, 16, 0.12);
+
+    box-shadow:
+            0 10px 35px rgba(101, 0, 10, 0.12);
+}
+
+
+/* Screen */
+
+.screen {
+    width: 70%;
+    margin: 0 auto 45px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    color: white;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #9f0d19,
+                    #65000a
+            );
+
+    border-radius: 50% 50% 10px 10px;
+
+    box-shadow:
+            0 8px 20px rgba(101, 0, 10, 0.25);
+}
+
+
+/* Seat area */
+
+.seats-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* Seat row */
+
+.seat-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.row-name {
+    width: 25px;
+
+    font-weight: bold;
+
+    color: #65000a;
+}
+
+
+/* Seat */
+
+.seat {
+    width: 42px;
+    height: 38px;
+
+    border: 1px solid #c99627;
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: #65000a;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.seat:hover {
+    transform: translateY(-2px);
+
+    background: #fff4d8;
+}
+
+
+/* Selected */
+
+.seat.selected {
+    background:
+            linear-gradient(
+                    135deg,
+                    #e5b84b,
+                    #c99627
+            );
+
+    color: #4c3000;
+
+    border-color: #b88319;
+
+    box-shadow:
+            0 4px 10px rgba(180, 130, 30, 0.25);
+}
+
+
+/* Legend */
+
+.seat-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    margin-top: 35px;
+
+    color: #5e4c49;
+}
+
+.seat-legend div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-seat {
+    width: 18px;
+    height: 18px;
+
+    display: inline-block;
+
+    border-radius: 5px;
+}
+
+.legend-seat.available {
+    background: white;
+    border: 1px solid #c99627;
+}
+
+.legend-seat.selected {
+    background: #c99627;
+}
+
+.legend-seat.booked {
+    background: #9f0d19;
+}
+
+
+/* Summary */
+
+.seat-summary {
+    text-align: center;
+
+    margin-top: 30px;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background: #fff4d8;
+
+    border: 1px solid #e6c56f;
+}
+
+.seat-summary h4 {
+    color: #65000a;
+    margin-bottom: 8px;
+}
+
+.seat-summary p {
+    color: #5e4c49;
+    font-weight: 500;
+}
+
+
+/* Continue */
+
+.continue-btn {
+    display: block;
+
+    width: 250px;
+
+    margin: 25px auto 0;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #a30f1b,
+                    #780711
+            );
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow:
+            0 5px 15px rgba(125, 7, 16, 0.22);
+}
+
+.continue-btn:hover {
+    background:
+            linear-gradient(
+                    135deg,
+                    #780711,
+                    #5e050c
+            );
+
+    transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .seat-selection-page {
+        padding: 10px;
+    }
+
+    .theatre-container {
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    .seat {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .seat-row {
+        gap: 4px;
+    }
+
+    .seat-legend {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==============================
+   CINEBOOK CINEMATIC BACKGROUND
+   ============================== */
+
+.cinebook-background {
+    background:
+            radial-gradient(
+                    circle at top left,
+                    rgba(159, 13, 25, 0.12),
+                    transparent 35%
+            ),
+            radial-gradient(
+                    circle at bottom right,
+                    rgba(218, 164, 65, 0.12),
+                    transparent 35%
+            ),
+            linear-gradient(
+                    135deg,
+                    #fffaf2,
+                    #f8eee3,
+                    #fff8ed
+            );
+
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   PAYMENT PAGE
+   ============================== */
+
+.payment-page {
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.payment-container {
+    max-width: 650px;
+    margin: auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+            0 12px 35px rgba(101, 0, 10, 0.15);
+}
+
+
+/* Header */
+
+.payment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.payment-header > div {
+    flex: 1;
+    text-align: center;
+}
+
+.payment-header h2 {
+    margin: 0;
+}
+
+.payment-header p {
+    margin: 5px 0 0;
+}
+
+
+/* Summary */
+
+.payment-summary {
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: #fffaf2;
+
+    border: 1px solid #ead6c8;
+
+    margin-bottom: 25px;
+}
+
+.payment-summary h3 {
+    color: #65000a;
+    margin-bottom: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #ead6c8;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 15px;
+
+    font-size: 20px;
+
+    color: #65000a;
+}
+
+
+/* Payment methods */
+
+.payment-title {
+    text-align: center;
+
+    color: #65000a;
+
+    margin-bottom: 15px;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.payment-method {
+    flex: 1;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #dbc9bd;
+
+    background: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.payment-method.active {
+    background: #65000a;
+
+    color: white;
+
+    border-color: #65000a;
+}
+
+
+/* QR */
+
+.qr-payment {
+    text-align: center;
+
+    padding: 20px;
+}
+
+.qr-payment h4 {
+    color: #65000a;
+}
+
+.qr-box {
+    display: inline-block;
+
+    padding: 15px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.1);
+
+    margin: 15px 0;
+}
+
+.payment-note {
+    color: #806b65;
+}
+
+
+/* Card */
+
+.card-payment {
+    padding: 10px 0;
+}
+
+
+/* Cash */
+
+.cash-payment {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #fff4d8;
+
+    border: 1px solid #e6c56f;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+.cash-payment h4 {
+    color: #65000a;
+}
+
+
+/* Pay */
+
+.pay-button {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #a30f1b,
+                    #780711
+            );
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+.pay-button:hover {
+    background:
+            linear-gradient(
+                    135deg,
+                    #780711,
+                    #5e050c
+            );
+}
+
+.pay-button:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+}
+
+.processing-text {
+    text-align: center;
+
+    margin-top: 15px;
+
+    color: #65000a;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   DIGITAL TICKET
+   ============================== */
+
+.ticket-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+.ticket-card {
+
+    width: 450px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    box-shadow:
+            0 15px 40px rgba(0,0,0,0.15);
+
+    border-top:
+            8px solid #9f0d19;
+}
+
+.success-mark {
+
+    text-align: center;
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+}
+
+.ticket-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+    padding-bottom: 10px;
+
+    border-bottom:
+            1px dashed #ddd;
+}
+
+.qr-ticket {
+
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   CUSTOMER DASHBOARD BACKGROUND
+   SAME AS LOGIN PAGE
+   ========================================= */
+
+.customer-dashboard-page {
+    min-height: 100vh;
+
+    background-image: url("/login-background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    padding: 30px 20px;
+
+    color: white;
+}
+
+
+/* =========================================
+   WHITE BOX BEHIND MOVIE POSTERS
+   ========================================= */
+
+.movie-section {
+    background: #fffdf9;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+            0 10px 30px rgba(101, 0, 10, 0.12);
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   CUSTOMER PAGE SECTION HEADINGS
+   ========================================= */
+
+.customer-page h2 {
+    color: #f6c27a;
+
+    font-weight: bold;
+
+    text-shadow:
+            1px 2px 5px rgba(0, 0, 0, 0.35);
+}
