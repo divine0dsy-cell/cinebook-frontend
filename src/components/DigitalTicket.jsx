@@ -1,5 +1,4 @@
 import React from "react";
-import { QRCodeCanvas } from "qrcode.react";
 
 function DigitalTicket({ booking, onDone }) {
 
@@ -21,10 +20,6 @@ function DigitalTicket({ booking, onDone }) {
     // ==============================
     // BOOKING ID
     // ==============================
-
-    const bookingId = booking.id
-        ? `CB${String(booking.id).padStart(6, "0")}`
-        : `CB${Date.now().toString().slice(-6)}`;
 
 
     // ==============================
@@ -320,72 +315,6 @@ function DigitalTicket({ booking, onDone }) {
 
                         </div>
 
-
-                        {/* ==============================
-                            QR CODE
-                        ============================== */}
-
-                        <div
-                            className="col-md-4 text-center mt-4 mt-md-0"
-                            style={{
-                                borderLeft: "2px dashed #d8c5bd",
-                                paddingLeft: "30px"
-                            }}
-                        >
-
-                            <h5
-                                style={{
-                                    color: "#65000a",
-                                    fontWeight: "bold"
-                                }}
-                            >
-                                Entry QR
-                            </h5>
-
-
-                            <p
-                                className="text-muted"
-                                style={{
-                                    fontSize: "13px"
-                                }}
-                            >
-                                Scan this QR code
-                                to verify your ticket.
-                            </p>
-
-
-                            <div
-                                style={{
-                                    display: "inline-block",
-                                    background: "white",
-                                    padding: "12px",
-                                    borderRadius: "12px",
-                                    border: "1px solid #eee"
-                                }}
-                            >
-
-                                <QRCodeCanvas
-                                    value={ticketData}
-                                    size={180}
-                                    level="H"
-                                />
-
-                            </div>
-                            <div
-                                style={{
-                                    marginTop: "12px",
-                                    fontSize: "13px",
-                                    color: "#777"
-                                }}
-                            >
-                                Show this QR at the theatre entrance.
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
 
 
                 {/* ==============================
