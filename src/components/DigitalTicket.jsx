@@ -21,13 +21,11 @@ function DigitalTicket({ booking, onDone }) {
     // BOOKING ID
     // ==============================
 
+    const bookingId = booking.id
+        ? `CB${String(booking.id).padStart(6, "0")}`
+        : `CB${Date.now().toString().slice(-6)}`;
 
-    // ==============================
-    // QR DATA
-    // ==============================
 
-    const ticketData =
-        `${window.location.origin}/ticket/${booking.id}`;
     return (
 
         <div
@@ -125,6 +123,7 @@ function DigitalTicket({ booking, onDone }) {
                             >
                                 🎬 CineBook
                             </h2>
+
                             <div
                                 style={{
                                     marginTop: "5px",
@@ -153,7 +152,7 @@ function DigitalTicket({ booking, onDone }) {
 
 
                 {/* ==============================
-                    MOVIE + QR SECTION
+                    MOVIE DETAILS
                 ============================== */}
 
                 <div
@@ -164,11 +163,7 @@ function DigitalTicket({ booking, onDone }) {
 
                     <div className="row">
 
-                        {/* ==============================
-                            MOVIE DETAILS
-                        ============================== */}
-
-                        <div className="col-md-8">
+                        <div className="col-md-12">
 
                             <div
                                 style={{
@@ -252,6 +247,7 @@ function DigitalTicket({ booking, onDone }) {
                                     <strong>
                                         🪑 {booking.seats}
                                     </strong>
+
                                 </div>
 
                             </div>
@@ -315,6 +311,9 @@ function DigitalTicket({ booking, onDone }) {
 
                         </div>
 
+                    </div>
+
+                </div>
 
 
                 {/* ==============================
@@ -375,6 +374,7 @@ function DigitalTicket({ booking, onDone }) {
                         textAlign: "center"
                     }}
                 >
+
                     <div
                         style={{
                             color: "#65000a",
@@ -400,7 +400,7 @@ function DigitalTicket({ booking, onDone }) {
 
                         <br />
 
-                        Keep your QR code ready
+                        Keep your ticket ready
                         and show it at the entrance
                         for verification.
 
@@ -425,6 +425,7 @@ function DigitalTicket({ booking, onDone }) {
                         {/* BOOKING ID */}
 
                         <div className="col-md-6">
+
                             <div
                                 style={{
                                     fontSize: "12px",
