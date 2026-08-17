@@ -1,11 +1,27 @@
+import PublicTicket from "./components/PublicTicket.jsx";
 import React, { useRef, useState } from "react";
-
 import Login from "./components/Login";
 import CustomerDashboard from "./components/CustomerDashboard";
 import AdminDashboard from "./components/AdminDashboard";
 
 function App() {
+    // ==============================
+    // PUBLIC QR TICKET
+    // ==============================
 
+    const ticketPath = window.location.pathname;
+
+    if (ticketPath.startsWith("/ticket/")) {
+
+        const bookingId = ticketPath.split("/")[2];
+
+        return (
+            <PublicTicket
+                bookingId={bookingId}
+            />
+        );
+
+    }
     // ==============================
     // LOGIN STATE
     // ==============================

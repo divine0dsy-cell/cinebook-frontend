@@ -20,10 +20,7 @@ function Payment({ booking, onPaymentSuccess, onBack }) {
             console.log("Booking being sent:", booking);
 
             // Save booking in backend
-            const response = await axios.post(
-                "http://localhost:8080/movies",
-                booking
-            );
+            const response = await axios.post("https://cinebook-backend-doxe.onrender.com/movies", booking)
 
             console.log(
                 "Booking saved successfully:",

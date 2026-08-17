@@ -31,18 +31,8 @@ function DigitalTicket({ booking, onDone }) {
     // QR DATA
     // ==============================
 
-    const ticketData = JSON.stringify({
-        bookingId: bookingId,
-        movie: booking.movieName,
-        customer: booking.customerName,
-        email: booking.email,
-        showTime: booking.showTime,
-        seats: booking.seats,
-        amount: booking.totalAmount,
-        status: "PAID"
-    });
-
-
+    const ticketData =
+        `${window.location.origin}/ticket/${booking.id}`;
     return (
 
         <div
