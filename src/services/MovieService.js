@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "https://cinebook-backend-doxe.onrender.com";
+const API_URL =
+    "https://cinebook-backend-doxe.onrender.com/movies";
 
 
 // ==============================
@@ -10,7 +11,9 @@ const API_URL = "https://cinebook-backend-doxe.onrender.com";
 
 export const getAllMovies = () => {
 
-    return axios.get(API_URL);
+    return axios.get(
+        API_URL
+    );
 
 };
 
@@ -20,7 +23,9 @@ export const getAllMovies = () => {
 // CUSTOMER
 // ==============================
 
-export const getBookingsByEmail = (email) => {
+export const getBookingsByEmail = (
+    email
+) => {
 
     return axios.get(
         `${API_URL}/email/${encodeURIComponent(email)}`
