@@ -18,8 +18,8 @@ function Login({ onLogin }) {
         if (role === "admin") {
 
             if (
-                email.trim() === "admin@gmail.com" &&
-                password === "admin123"
+                email.trim() === "divya@gmail.com" &&
+                password === "divine0dsy"
             ) {
 
                 onLogin({
