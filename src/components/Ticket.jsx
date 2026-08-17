@@ -1,4 +1,4 @@
-import { QRCodeCanvas } from "qrcode.react";
+
 
 function Ticket({
                     booking,
@@ -11,15 +11,6 @@ function Ticket({
         Math.floor(
             100000 + Math.random() * 900000
         );
-
-    const qrData =`
-    Movie: ${booking.movieName}
-    Customer: ${booking.customerName}
-    Show: ${booking.showTime}
-    Seats: ${selectedSeats.join(", ")}
-    Amount: ₹${booking.totalAmount}
-    Booking ID: ${bookingId}`
-    ;
 
     return (
 
@@ -83,11 +74,6 @@ function Ticket({
                 </div>
 
                 <div className="qr-ticket">
-
-                    <QRCodeCanvas
-                        value={qrData}
-                        size={170}
-                    />
 
                 </div>
 
