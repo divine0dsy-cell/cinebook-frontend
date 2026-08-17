@@ -1,5 +1,3 @@
-
-
 function Ticket({
                     booking,
                     selectedSeats,
@@ -72,16 +70,6 @@ function Ticket({
                         PAID
                     </strong>
                 </div>
-
-                <div className="qr-ticket">
-
-                </div>
-
-                <p className="text-center mt-3">
-
-                    Scan QR to view ticket details
-
-                </p>
 
                 <button
                     className="btn btn-primary w-100 mt-3"
